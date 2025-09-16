@@ -5,7 +5,7 @@ import streamlit as st
 # ----------------- 기본 설정 -----------------
 st.set_page_config(page_title="두더지 잡기 (Streamlit)", page_icon="🐹", layout="centered")
 
-GAME_SEC_DEFAULT = 30
+GAME_SEC_DEFAULT = 10
 INTERVAL_MS_DEFAULT = 800  # 두더지 등장 주기(ms)
 
 # ----------------- 상태 초기화 -----------------
