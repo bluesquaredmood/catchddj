@@ -1,6 +1,7 @@
 import random
 import time
 import streamlit as st
+from streamlit_autorefresh import st_autorefresh
 
 # ----------------- 기본 설정 -----------------
 st.set_page_config(page_title="두더지 잡기 (Streamlit)", page_icon="🐹", layout="centered")
@@ -109,4 +110,5 @@ if st.session_state.running and st.session_state.time_left <= 0:
 # ----------------- 자동 새로고침 -----------------
 if st.session_state.running and st.session_state.time_left > 0:
     tick_ms = min(250, max(80, st.session_state.interval_ms // 3))
-    st.experimental_rerun() if False else st.autorefresh(interval=tick_ms, key="ticker")
+    st_autorefresh(interval=tick_ms, key="ticker")
+
